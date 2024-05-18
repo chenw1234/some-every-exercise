@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!-- saved from url=(0122)https://curric.springboard.com/software-engineering-career-track/default/exercises/js-array-some-every/solution/index.html -->
+<html lang="en"><script id="youtube-hd-fjdmkanbdloodhegphphhklnjfngoffa">var ythdlog = () => {};;var ythderror = () => {};</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Some Every Exercise</title>
+
+    <link rel="stylesheet" href="./Some Every Exercise_files/pygments.css" type="text/css">
+    <link rel="stylesheet" href="./Some Every Exercise_files/handouts-sphinx.css">
+
+    
+    <link href="./Some Every Exercise_files/css" rel="stylesheet" type="text/css">
+    
+</head>
+<body>
+<div id="page-wrapper">
+    <div id="page-sidebar">
+        <header>
+            <p class="project">Springboard</p>
+
+            <p class="title">Some Every Exercise</p>
+
+            <p class="backlink"><a href="https://curric.springboard.com/software-engineering-career-track/default/exercises/js-array-some-every/solution/index.html"> « Back to Homepage</a></p>
+
+        </header>
+        <div id="toc">
+            <ul>
+<li><a class="reference internal" href="https://curric.springboard.com/software-engineering-career-track/default/exercises/js-array-some-every/solution/index.html#">Some Every Exercise</a></li>
+</ul>
+
+        </div>
+    </div>
+    <div id="page-content">
+        
+  <div class="section" id="some-every-exercise">
+<h1>Some Every Exercise</h1>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">hasOddNumber</span><span class="p">(</span><span class="nx">arr</span><span class="p">){</span>
+  <span class="k">return</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">some</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">val</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">val</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!==</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="p">})</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">hasAZero</span><span class="p">(</span><span class="nx">num</span><span class="p">){</span>
+  <span class="k">return</span> <span class="nx">num</span><span class="p">.</span><span class="nx">toString</span><span class="p">().</span><span class="nx">split</span><span class="p">(</span><span class="s1">''</span><span class="p">).</span><span class="nx">some</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">val</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">val</span> <span class="o">===</span> <span class="s1">'0'</span><span class="p">;</span>
+  <span class="p">})</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">hasOnlyOddNumbers</span><span class="p">(</span><span class="nx">arr</span><span class="p">){</span>
+  <span class="k">return</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">every</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">val</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">val</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!==</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="p">})</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">hasNoDuplicates</span><span class="p">(</span><span class="nx">arr</span><span class="p">){</span>
+  <span class="k">return</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">every</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">val</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">val</span><span class="p">)</span> <span class="o">===</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">lastIndexOf</span><span class="p">(</span><span class="nx">val</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">hasCertainKey</span><span class="p">(</span><span class="nx">arr</span><span class="p">,</span> <span class="nx">key</span><span class="p">){</span>
+  <span class="k">return</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">every</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">val</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">key</span> <span class="k">in</span> <span class="nx">val</span>
+  <span class="p">})</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">hasCertainValue</span><span class="p">(</span><span class="nx">arr</span><span class="p">,</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">searchValue</span><span class="p">){</span>
+  <span class="k">return</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">every</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">val</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">val</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">===</span> <span class="nx">searchValue</span><span class="p">;</span>
+  <span class="p">})</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+
+    </div>
+</div>
+<script type="text/javascript" src="./Some Every Exercise_files/jquery.js.download"></script>
+<script type="text/javascript" src="./Some Every Exercise_files/underscore.js.download"></script>
+<script type="text/javascript" src="./Some Every Exercise_files/doctools.js.download"></script>
+<script type="text/javascript" src="./Some Every Exercise_files/language_data.js.download"></script> 
+
+</body></html>
